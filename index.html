@@ -5,8 +5,11 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="icon" type="image/x-icon" href="./nidhish.jpg">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
+
 <style>
     .monteserrat {
         font-family: 'Montserrat', sans-serif;
@@ -14,10 +17,29 @@
     .gv{
         font-family: 'Great Vibes', cursive;
     }
+    .fade-in {
+        opacity: 0; /* Set initial opacity to 0 */
+        animation: fade 1.25s ease-in-out forwards; /* Apply the fade animation */
+        }
+
+        @keyframes fade {
+        0% {
+            opacity: 0; /* At the beginning (0%), opacity is 0 */
+        }
+        100% {
+            opacity: 1; /* At the end (100%), opacity is 1 */
+        }
+        }
+
+
+
 </style>
+<script>
+    AOS.init();
+</script>
 <body class="monteserrat overflow-x-hidden">
     <div class="p-14 w-screen h-screen flex flex-col bg-red-900 overflow-hidden">
-        <div class="m-auto ">
+        <div class="m-auto fade-in">
             <img class="w-96 h-96 md:w-64 md:h-64 rounded-full object-cover mx-auto" src="./nidhish.jpg" />
             <div class="text-center gv py-5 text-8xl md:text-4xl text-white"><span class=" text-7xl font-medium gv">Nidhish's</span> Grad Program</div>
             <a href="#schedule" class="text-rose-50"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 animate-bounce my-3  mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
@@ -25,7 +47,7 @@
             </svg></a>
         </div>
     </div>
-    <div class="p-14 flex flex-col">
+    <div class="p-14 flex flex-col ">
         <div class="p-10 rounded-lg shadow-lg text-xl" id="accordion-collapse" data-accordion="collapse" data-active-classes="text-black bg-black" data-inactive-classes="text-black dark:text-black">
             <div class="p-2 pb-5 text-3xl font-bold" id="schedule">Schedule</div>
             <div class="flex p-2  bg-red-50">
@@ -190,4 +212,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </body>
